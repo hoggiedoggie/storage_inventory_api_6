@@ -44,11 +44,14 @@ REDIS_PASSWORD=your_redis_password
 JWT_ACCESS_SECRET=your_super_secret
 ALGORITHM=HS256
 ```
+---
 2. Запуск через Docker Compose
    
 Система автоматически поднимет приложение, базу данных и кеш:
 
 ```docker-compose up --build```
+
+---
 ### 📖 Документация API
 После запуска документация доступна по адресам:
 
@@ -58,6 +61,7 @@ ALGORITHM=HS256
 
 **!Примечание:** Для доступа к эндпоинтам раздела Storage необходимо сначала авторизоваться через /auth/login. После успешного входа кука access_token будет установлена автоматически.
 
+---
 ### 📁 Структура проекта
 ```app/main.py``` — Точка входа, настройка FastAPI и OpenAPI.
 
@@ -70,6 +74,7 @@ ALGORITHM=HS256
 ```app/services/``` — Бизнес-логика (Auth, Cache, Storage).
 
 ```app/core/``` — Глобальные конфиги и хелперы безопасности.
+---
 
 ### 📋 Важные команды для разработки
 Очистка системы: ```docker-compose down -v.```
